@@ -1,0 +1,521 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<body>
+<h1>Sanity</h1>
+<p>Load Site and validate</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td>Load Page</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>navigate</td>
+        <td>https://energy.comparethemarket.com/energy/v2/?AFFCLIE=TST</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Confirm Arrival</td>
+        <td>classname</td>
+        <td>main-heading</td>
+        <td></td>
+        <td>containstext</td>
+        <td>Your Supplier</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<p>Enter Postcode and continue</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td>Enter postcode value</td>
+        <td>id</td>
+        <td>your-postcode</td>
+        <td></td>
+        <td>sendkeys</td>
+        <td>PE2 6YS</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Find Postcode</td>
+        <td>id</td>
+        <td>find-postcode</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Click Gas Only</td>
+        <td>xpath</td>
+        <td>.//*[@id='compare-gas-label']/span</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Open Dropdown</td>
+        <td>xpath</td>
+        <td>//*[@id='sel2_chosen']/a/div/b</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Choose Economy Energy</td>
+        <td>xpath</td>
+        <td>//*[@id='sel2_chosen']/div/ul/li[12]</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Click on next</td>
+        <td>id</td>
+        <td>goto-your-supplier-details</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<p>Gas</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td>Confirm Arrival</td>
+        <td>classname</td>
+        <td>main-heading with-icon checked</td>
+        <td></td>
+        <td>containstext</td>
+        <td>Gas</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Open Tariff Dropdown</td>
+        <td>xpath</td>
+        <td>//*[@id='gas_tariff_additional_info_chosen']/a/div/b</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Choose Evergreen</td>
+        <td>xpath</td>
+        <td>//*[@id='gas_tariff_additional_info_chosen']/div/ul/li[3]</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Select usage pound</td>
+        <td>xpath</td>
+        <td>//*[@id='gas-type-of-bill-question']/div/div/div[1]/label[2]/span</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Input value to usage text field</td>
+        <td>id</td>
+        <td>gas-spend</td>
+        <td></td>
+        <td>sendkeys</td>
+        <td>100</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Open bill date</td>
+        <td>xpath</td>
+        <td>/*[@id='gas-bill-date-field']/div/div/span[1]</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Pick 031016</td>
+        <td>xpath</td>
+        <td>//*[@id='gas-bill-day_table']/tbody/tr[2]/td[2]/div</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Click Next</td>
+        <td>id</td>
+        <td>goto-your-energy</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Confirm On page</td>
+        <td>classname</td>
+        <td>main-heading</td>
+        <td></td>
+        <td>containstext</td>
+        <td>Your Preferences</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Select Fixed</td>
+        <td>xpath</td>
+        <td>//*[@id='tariff-selection-question']/div/label[1]/span</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Enter email</td>
+        <td>id</td>
+        <td>email</td>
+        <td></td>
+        <td>sendkeys</td>
+        <td>a@a.com</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Accept Terms</td>
+        <td></td>
+        <td>//*[@id='terms-label']/span[2]</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<p>Go to Results</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td>Click Go To Prices</td>
+        <td>id</td>
+        <td>email-submit</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Wait for arrival</td>
+        <td>xpath</td>
+        <td>//*[@id='content-container']/div[2]/div[1]/p</td>
+        <td></td>
+        <td>containstext</td>
+        <td>We've found you</td>
+        <td>60</td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+</body>
+</html>

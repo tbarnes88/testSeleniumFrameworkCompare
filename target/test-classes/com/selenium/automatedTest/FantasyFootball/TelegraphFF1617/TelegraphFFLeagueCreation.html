@@ -1,0 +1,999 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<body>
+<h1>TelegraphFFLeagueCreation</h1>
+<p>Telegraph Fantasy Football</p>
+<p>Completing Acquisition</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>callhtml</td>
+        <td>TelegraphFFAcquisitionQuick.html</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Confirm Landing</td>
+        <td>xpath</td>
+        <td>.//*[@id='off-canvas-wrapper-inner']/div/section/div[3]/div[2]/h1</td>
+        <td></td>
+        <td>exists</td>
+        <td></td>
+        <td>60</td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<p>Creating a league</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>2</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Clicking Create league</td>
+        <td>id</td>
+        <td>create-league-button</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Confirm Landing</td>
+        <td>xpath</td>
+        <td>.//*[@id='createModal']/div[1]/div[1]/h2</td>
+        <td></td>
+        <td>exists</td>
+        <td></td>
+        <td>60</td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Entering league name</td>
+        <td>id</td>
+        <td>league-name</td>
+        <td></td>
+        <td>sendkeys</td>
+        <td>Jordans League</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Entering league passcode</td>
+        <td>id</td>
+        <td>passcode</td>
+        <td></td>
+        <td>sendkeys</td>
+        <td>1221</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Creating league</td>
+        <td>xpath</td>
+        <td>.//*[@id='createModal']/div[2]/div[1]/form[1]/div[3]/div[1]/input</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<p>Viewing all scores</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td>Opening weekly scores</td>
+        <td>id</td>
+        <td>league-tab-content-weekly-label</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Opening monthly scores</td>
+        <td>id</td>
+        <td>league-tab-content-monthly-label</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Opening HOF scores</td>
+        <td>id</td>
+        <td>league-tab-content-hof-label</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<p>Navigating back to My leagues</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td>Clicking leagues on the nav</td>
+        <td>xpath</td>
+        <td>.//*[@id='off-canvas-list']/li[3]/a</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Confirm Landing</td>
+        <td>xpath</td>
+        <td>.//*[@id='off-canvas-wrapper-inner']/div/section/div[3]/div[2]/h1</td>
+        <td></td>
+        <td>exists</td>
+        <td></td>
+        <td>60</td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<p>Creating a second league</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td>Clicking Create league</td>
+        <td>id</td>
+        <td>create-league-button</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Entering an invalid league name</td>
+        <td>id</td>
+        <td>league-name</td>
+        <td></td>
+        <td>sendkeys</td>
+        <td>%^{}}{}</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Entering an invalid league passcode</td>
+        <td>id</td>
+        <td>passcode</td>
+        <td></td>
+        <td>set</td>
+        <td>12</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Creating league</td>
+        <td>xpath</td>
+        <td>.//*[@id='createModal']/div[2]/div[1]/form[1]/div[3]/div[1]/input</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Setting a valid league name</td>
+        <td>id</td>
+        <td>league-name</td>
+        <td></td>
+        <td>set</td>
+        <td>Jordan League Name</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Setting an invalid league passcode</td>
+        <td>id</td>
+        <td>passcode</td>
+        <td></td>
+        <td>set</td>
+        <td>12121212</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Create League</td>
+        <td>xpath</td>
+        <td>.//*[@id='createModal']/div[2]/div[1]/form[1]/div[3]/div[1]/input</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Confirm Landing</td>
+        <td>xpath</td>
+        <td>.//*[@id='createModal']/div[1]/div[1]/h2</td>
+        <td></td>
+        <td>exists</td>
+        <td></td>
+        <td>60</td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Setting a valid league passcode</td>
+        <td>id</td>
+        <td>passcode</td>
+        <td></td>
+        <td>set</td>
+        <td>1212</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Create the league</td>
+        <td>xpath</td>
+        <td>.//*[@id='createModal']/div[2]/div[1]/form[1]/div[3]/div[1]/input</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Create the league</td>
+        <td>xpath</td>
+        <td>.//*[@id='createModal']/div[2]/div[1]/form[1]/div[3]/div[1]/input</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<p>Viewing all scores</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td>Opening weekly scores</td>
+        <td>id</td>
+        <td>league-tab-content-weekly-label</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Opening monthly scores</td>
+        <td>id</td>
+        <td>league-tab-content-monthly-label</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Opening HOF scores</td>
+        <td>id</td>
+        <td>league-tab-content-hof-label</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Clicking leagues on the nav</td>
+        <td>xpath</td>
+        <td>.//*[@id='off-canvas-list']/li[3]/a</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<p>Joining a leagues</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Clicking Join league</td>
+        <td>id</td>
+        <td>join-league-button</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Confirm Landing</td>
+        <td>xpath</td>
+        <td>.//*[@id='joinModal']/div[1]/div[1]/h2</td>
+        <td></td>
+        <td>exists</td>
+        <td></td>
+        <td>60</td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Entering a league pin</td>
+        <td>id</td>
+        <td>join-leaguepin</td>
+        <td></td>
+        <td>sendkeys</td>
+        <td>8122188</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Entering a league code</td>
+        <td>xpath</td>
+        <td>.//*[@id='join-form']/div[2]/div/label/input</td>
+        <td></td>
+        <td>sendkeys</td>
+        <td>1221</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Joining league</td>
+        <td>xpath</td>
+        <td>.//*[@id='joinModal']/div[2]/div[1]/form[1]/div[3]/div[1]/input</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<p>Viewing all scores</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>2</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Opening weekly scores</td>
+        <td>id</td>
+        <td>league-tab-content-weekly-label</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Opening monthly scores</td>
+        <td>id</td>
+        <td>league-tab-content-monthly-label</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Opening HOF scores</td>
+        <td>id</td>
+        <td>league-tab-content-hof-label</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Clicking leagues on the nav</td>
+        <td>xpath</td>
+        <td>.//*[@id='off-canvas-list']/li[3]/a</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Confirm Landing</td>
+        <td>xpath</td>
+        <td>.//*[@id='joinModal']/div[1]/div[1]/h2</td>
+        <td></td>
+        <td>exists</td>
+        <td></td>
+        <td>60</td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>3</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<p>Not able to exceed 3 leagues</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td>Joining a league doesnt exist</td>
+        <td>id</td>
+        <td>join-league-button</td>
+        <td></td>
+        <td>doesnotexist</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Create a league doesnt exist</td>
+        <td>id</td>
+        <td>create-league-button</td>
+        <td></td>
+        <td>doesnotexist</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,152 @@
+#set( $path = "" )
+#set($start = 1)
+#set($end = ($testResultSet.level))
+#set($range = [$start..$end])
+#foreach($i in $range)
+    #if ($i == 0)
+        #set( $path = "" )
+    #else
+        #set( $path = "$path../" )
+    #end
+#end
+<html>
+<head>
+    <!-- <link href="../../../concordion.css" rel="stylesheet" type="text/css"/> -->
+    <link href="${path}style.css" rel="stylesheet" type="text/css"/>
+    <title>${testResultSet.title}</title>
+</head>
+<body>
+
+<div id="content">
+    <h1>Test Results For - ${testResultSet.title} </h1>
+	#set( $env = $testResultSet.testEnvironment )
+    <table class="bordered">
+		<tr>
+			<th>Brand</th>
+			<td>${env.brand}</td>
+			<th>URL</th>
+			<td>${env.signInURL}</td>
+		</tr>
+		<tr>
+			<th>Environment</th>
+			<td>${env.env}</td>
+			<th>UserId/Password</th>
+			<td>${env.userId}/${env.password}</td>
+		</tr>
+		<tr>
+			<th>Browser</th>
+			<td>${env.browser}</td>
+			<th>Driver<br/>Agent</th>
+			<td>${env.driver}<br/>${env.userAgent}</td>
+		</tr>
+	</table>
+	<p></p>
+	<table class="bordered">
+        <thead>
+        <tr>
+            <th>No.</th>
+            <th>${testResultSet.title}</th>
+            <th>Test Status</th>
+            <th class="red">Failed count</th>
+            <th class="green">Passed count</th>
+            <th>Start time</th>
+            <th>Finish time</th>
+            <th>Duration</th>
+        </tr>
+        </thead>
+        <tbody>
+            #set( $i = 0 )
+            #set( $start = 0 )
+            #set( $end = 0 )
+            #set( $duration = 0 )
+            #set( $testduration = 0 )
+			#foreach($testResult in $testResultSet.getMap().entrySet())
+                #set( $percentage = $testResult.value.getPercentagePassed() )
+				#if ($i == 0)
+					#set( $start = $testResult.value.getStartTime() )
+					#set( $end = $testResult.value.getEndTime() )
+				#else
+					#if ($start.getTime() > $testResult.value.getStartTime().getTime())
+						#set( $start = $testResult.value.getStartTime() )
+					#end
+					#if ($end.getTime() < $testResult.value.getEndTime().getTime())
+						#set( $end = $testResult.value.getEndTime() )
+					#end
+				#end
+                #set( $i = $i + 1 )
+                #set( $duration = $duration + $testResult.value.getDuration() )
+                #if ($percentage < 75)
+                    #set( $class = "red" )
+                #end
+                #if ($percentage > 75 || $percentage < 100)
+                    #set( $class = "orange" )
+                #end
+                #if ($percentage == 100)
+                    #set( $class = "green" )
+                #end
+                ## calculating time stamp for each test
+                #set( $testduration = $testResult.value.duration )
+                #set( $hours    = $testduration / (1000*60*60)  )
+                #set( $minutes  = ($testduration % (1000*60*60)) / (1000*60) )
+				#set ( $lminutes = '' )
+				#if ( $minutes < 10 )
+					#set ( $lminutes = '0' )
+				#end
+                #set( $seconds  = ((($testduration % (1000*60*60)) % (1000*60)) / 1000 ) )
+				#set ( $lseconds= '' )
+				#if ( $seconds < 10 )
+					#set ( $lseconds = '0' )
+				#end
+
+                ##set( $startTime  = $dateTool.format('short', $testResult.value.getStartTime() ) )
+                ##set( $endTime    = $dateTool.format('short', $testResult.value.getEndTime()) )
+
+            <tr onclick="document.location = '$testResult.value.getLink()';">
+                <td> $i </td>
+                <td><a class="${class}" href=$testResult.value.getLink() >$testResult.value.getName()</a></td>
+                <td>$testResult.value.getTestStatus()</td>
+                <td>$testResult.value.getFailureCount()</td>
+                <td>$testResult.value.getPassedCount()</td>
+                <td><span class="time"> $testResult.value.getStartTime() </span></td>
+                <td><span class="time"> $testResult.value.getEndTime() </span></td>
+                <td>${hours}:${lminutes}${minutes}:${lseconds}${seconds} </td>
+            </tr>
+            #end
+            ## calculating time stamp for total duration
+            #set( $dhours    = $duration / (1000*60*60)  )
+            #set( $dminutes  = ($duration % (1000*60*60)) / (1000*60) )
+			#set ( $lminutes = '' )
+			#if ( $dminutes < 10 )
+				#set ( $lminutes = '0' )
+			#end
+			#set( $dseconds  = ((($duration % (1000*60*60)) % (1000*60)) / 1000 ) )
+			#set ( $lseconds= '' )
+			#if ( $dseconds < 10 )
+				#set ( $lseconds = '0' )
+			#end
+                    <tr class="total">
+            <td></td>
+            <td>
+                <strong>Totals:</strong>
+			</td>
+			<td>
+            	$testResultSet.getOverallStatus()
+            </td>
+			<td>
+				$testResultSet.getTotalFailureCount()
+            </td>
+			<td>
+				$testResultSet.getTotalPassedCount()
+			</td>
+            <td>$start</td>
+            <td>$end</td>
+            <td>${dhours}:${lminutes}${dminutes}:${lseconds}${dseconds}</td>
+        </tr>
+        </tbody>
+    </table>
+    <p class="description">
+        This table shows a summary of functional test results
+    </p>
+</div>
+
+</body>                                 </html>

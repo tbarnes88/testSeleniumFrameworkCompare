@@ -1,0 +1,7 @@
+#surefire
+#Thu Oct 06 09:02:15 BST 2016
+exec.args=test.html
+user.dir=C\:\\testSeleniumFramework
+localRepository=C\:\\Users\\tom.barnes\\.m2\\repository
+concordion.output.dir=C\:\\SeleniumResults
+basedir=C\:\\testSeleniumFramework

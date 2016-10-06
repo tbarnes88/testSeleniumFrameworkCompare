@@ -1,0 +1,1699 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<body>
+<h1>TelegraphFFAcquisitionFull</h1>
+<p>Telegraph Fantasy Football</p>
+<p>Manual picking a team</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td>Navigate to Telegraph FF</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>navigate</td>
+        <td>https://fantasyfootball.telegraph.co.uk/premier-league/home</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Confirm landing</td>
+        <td>id</td>
+        <td>pick-a-team</td>
+        <td></td>
+        <td>exists</td>
+        <td></td>
+        <td>60</td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Clicking login</td>
+        <td>id</td>
+        <td>pick-a-team</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>2</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Confirm landing</td>
+        <td>id</td>
+        <td>budget_remain_title</td>
+        <td></td>
+        <td>exists</td>
+        <td></td>
+        <td>60</td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Selecting a formation</td>
+        <td>xpath</td>
+        <td>//*[@id='off-canvas-wrapper-inner']/div/section/div[2]/div[1]/div[1]/div[2]/div[2]/div[6]/button</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<p>Selecting Stikers</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td>Selecting Strikers tab</td>
+        <td>xpath</td>
+        <td>//*[@id='player-group-filters']/div[4]</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Selecting Aguero, S as striker</td>
+        <td>xpath</td>
+        <td>//tr[@data-plaid='4001']</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Selecting Kane, H as striker</td>
+        <td>xpath</td>
+        <td>//tr[@data-plaid='4002']</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<p>Selecting Midfielders</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td>Selecting Midfielders tab</td>
+        <td>xpath</td>
+        <td>//*[@id='player-group-filters']/div[3]</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Selecting a Sanchez, A as midfielder</td>
+        <td>xpath</td>
+        <td>//tr[@data-plaid='3076']</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Selecting a de Bruyne, K as midfielder</td>
+        <td>xpath</td>
+        <td>//tr[@data-plaid='3001']</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Selecting a Ozil, M as midfielder</td>
+        <td>xpath</td>
+        <td>//tr[@data-plaid='3002']</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<p>Selecting Defenders</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td>Selecting Defenders tab</td>
+        <td>xpath</td>
+        <td>//*[@id='player-group-filters']/div[2]</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Selecting a Koscielny, L as defender</td>
+        <td>xpath</td>
+        <td>//tr[@data-plaid='2002']</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Selecting a Alderweireld, T as defender</td>
+        <td>xpath</td>
+        <td>//tr[@data-plaid='2001']</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Selecting a Kompany, V as defender</td>
+        <td>xpath</td>
+        <td>//tr[@data-plaid='2006']</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Selecting a Sagna, B as defender</td>
+        <td>xpath</td>
+        <td>//tr[@data-plaid='2018']</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Selecting a Bellerin, H as defender</td>
+        <td>xpath</td>
+        <td>//tr[@data-plaid='2004']</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<p>Selecting Goalkeeper</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td>Selecting Goalkeepers tab</td>
+        <td>xpath</td>
+        <td>//*[@id='player-group-filters']/div[1]</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Selecting a de Gea, D as goalkeeper</td>
+        <td>xpath</td>
+        <td>//tr[@data-plaid='1001']</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Trying to select another goalkeeper</td>
+        <td>xpath</td>
+        <td>//*[@id='player-selection-list']/tbody/tr[165]/td[2]</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Submit team (over budget)</td>
+        <td>id</td>
+        <td>js-submit-team</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Selecting strikers</td>
+        <td>xpath</td>
+        <td>//*[@id='player-group-filters']/div[4]</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>deselecting Aguero, S as striker</td>
+        <td>xpath</td>
+        <td>//tr[@data-plaid='4001']</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>deselecting Kane, H as striker</td>
+        <td>xpath</td>
+        <td>//tr[@data-plaid='4002']</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>selecting Calvert-Lewin, D as striker</td>
+        <td>xpath</td>
+        <td>//tr[@data-plaid='4105']</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>selecting Hinchcliffe, B as striker</td>
+        <td>xpath</td>
+        <td>//tr[@data-plaid='4108']</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Selecting midfielders</td>
+        <td>xpath</td>
+        <td>//*[@id='player-group-filters']/div[2]</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Selecting Sagna, B as midfielder</td>
+        <td>xpath</td>
+        <td>//tr[@data-plaid='2004']</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Selecting Ivanovic, B as midfielder</td>
+        <td>xpath</td>
+        <td>//tr[@data-plaid='2005']</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>changing to invalid formation 4-4-2</td>
+        <td>xpath</td>
+        <td>//*[@id='off-canvas-wrapper-inner']/div/section/div[2]/div[1]/div[1]/div[2]/div[2]/div[2]/button</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Selecting a valid formation 5-3-2</td>
+        <td>xpath</td>
+        <td>//*[@id='off-canvas-wrapper-inner']/div/section/div[2]/div[1]/div[1]/div[2]/div[2]/div[6]/button</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>submitting a under budget team</td>
+        <td>id</td>
+        <td>js-submit-team</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>2</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>closing window</td>
+        <td>xpath</td>
+        <td>.//*[@id='team-form']/div[1]/div[2]/button</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>reset players</td>
+        <td>id</td>
+        <td>js-reset-team</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>2</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>autoselecting players</td>
+        <td>id</td>
+        <td>js-auto-team</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>submiting team</td>
+        <td>id</td>
+        <td>js-submit-team</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<p>Negative email check</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td>Confirm landing</td>
+        <td>xpath</td>
+        <td>.//*[@id='team-form']/div[1]/div[1]/h2</td>
+        <td></td>
+        <td>exists</td>
+        <td></td>
+        <td>60</td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Setting a teamname</td>
+        <td>id</td>
+        <td>teamname</td>
+        <td></td>
+        <td>sendkeys</td>
+        <td>qwertyuiopasdfghjklzxcv</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Setting an email</td>
+        <td>id</td>
+        <td>theemail</td>
+        <td></td>
+        <td>set</td>
+        <td>hello world</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Confirming an email</td>
+        <td>id</td>
+        <td>email2</td>
+        <td></td>
+        <td>set</td>
+        <td>hello world</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Setting an invalid password</td>
+        <td>id</td>
+        <td>thepassword</td>
+        <td></td>
+        <td>sendkeys</td>
+        <td>[]</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Setting an invalid password</td>
+        <td>id</td>
+        <td>confirmpassword</td>
+        <td></td>
+        <td>sendkeys</td>
+        <td>[]</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Confirming age</td>
+        <td>id</td>
+        <td>ageconfirm</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Submitting details</td>
+        <td>id</td>
+        <td>Submit</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Setting a password</td>
+        <td>id</td>
+        <td>thepassword</td>
+        <td></td>
+        <td>set</td>
+        <td>Pa55word1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Setting a different password</td>
+        <td>id</td>
+        <td>confirmpassword</td>
+        <td></td>
+        <td>set</td>
+        <td>12345678902</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Setting an email</td>
+        <td>id</td>
+        <td>theemail</td>
+        <td></td>
+        <td>set</td>
+        <td>helloworld@me.com</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Setting a different email</td>
+        <td>id</td>
+        <td>email2</td>
+        <td></td>
+        <td>set</td>
+        <td>worldhello@me.com</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>submitting with invalid information</td>
+        <td>id</td>
+        <td>Submit</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>resetting email</td>
+        <td>id</td>
+        <td>theemail</td>
+        <td></td>
+        <td>set</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>resetting email confirmation</td>
+        <td>id</td>
+        <td>email2</td>
+        <td></td>
+        <td>set</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>setting a random email</td>
+        <td>id</td>
+        <td>theemail</td>
+        <td></td>
+        <td>sendrandomemail</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<p>Entering personal details</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>correcting different password</td>
+        <td>id</td>
+        <td>confirmpassword</td>
+        <td></td>
+        <td>set</td>
+        <td>Pa55word1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>submitting valid information</td>
+        <td>id</td>
+        <td>Submit</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Confirm landing</td>
+        <td>xpath</td>
+        <td>.//*[@id='mob-cont']/h1</td>
+        <td></td>
+        <td>exists</td>
+        <td></td>
+        <td>60</td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Opening dropdown</td>
+        <td>id</td>
+        <td>title</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Selecting title from the dropdown</td>
+        <td>xpath</td>
+        <td>//*[@id='title']/option[2]</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Setting forename</td>
+        <td>xpath</td>
+        <td>//*[@id='reg-form']/div[3]/div/label/input</td>
+        <td></td>
+        <td>sendkeys</td>
+        <td>Jordan</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Setting Surname</td>
+        <td>xpath</td>
+        <td>//*[@id='reg-form']/div[4]/div/label/input</td>
+        <td></td>
+        <td>set</td>
+        <td>Miller</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Setting Address</td>
+        <td>xpath</td>
+        <td>//*[@id='reg-form']/div[5]/div/label/input</td>
+        <td></td>
+        <td>set</td>
+        <td>69 Road Street</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Setting Town</td>
+        <td>xpath</td>
+        <td>//*[@id='reg-form']/div[8]/div/label/input</td>
+        <td></td>
+        <td>set</td>
+        <td>Town</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Setting Postcode</td>
+        <td>xpath</td>
+        <td>//*[@id='reg-form']/div[10]/div/label/input</td>
+        <td></td>
+        <td>set</td>
+        <td>CO2 3QH</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<p>Selecting date of birth</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td>Opening dropdown</td>
+        <td>id</td>
+        <td>dob_day</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Selecting day of birth</td>
+        <td>xpath</td>
+        <td>//*[@id='dob_day']/option[21]</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Opening dropdown</td>
+        <td>xpath</td>
+        <td>//*[@id='reg-form']/div[13]/div[2]/select</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Selecting month of birth</td>
+        <td>xpath</td>
+        <td>//*[@id='reg-form']/div[13]/div[2]/select/option[3]</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Opening dropdown</td>
+        <td>xpath</td>
+        <td>//*[@id='reg-form']/div[13]/div[3]/select</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Selecting year of birth</td>
+        <td>xpath</td>
+        <td>//*[@id='reg-form']/div[13]/div[3]/select/option[3]</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<p>Opting out and submitting details</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td>Opting out of email</td>
+        <td>id</td>
+        <td>email-opt</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Opting out of phone</td>
+        <td>id</td>
+        <td>phone-opt</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Opting out of post</td>
+        <td>id</td>
+        <td>post-opt</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Opting out of sms</td>
+        <td>id</td>
+        <td>sms-opt</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Submit details</td>
+        <td>id</td>
+        <td>submit-btn</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>1</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Confirm landing</td>
+        <td>xpath</td>
+        <td>.//*[@id='continue-free']</td>
+        <td></td>
+        <td>exists</td>
+        <td></td>
+        <td>60</td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Select free team</td>
+        <td>id</td>
+        <td>continue-free</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>wait</td>
+        <td>2</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Confirm landing</td>
+        <td>xpath</td>
+        <td>.//*[@id='off-canvas-wrapper-inner']/div/section/div[2]/div/h1</td>
+        <td></td>
+        <td>exists</td>
+        <td></td>
+        <td>60</td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Opening dropdown</td>
+        <td>xpath</td>
+        <td>//*[@id='team-switcher']/div</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Selecting your favourite team</td>
+        <td>xpath</td>
+        <td>//*[@id='team-switcher']/div/div[2]/div[5]</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Clicking submit</td>
+        <td>id</td>
+        <td>support-team-submit</td>
+        <td></td>
+        <td>click</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Confirm landing</td>
+        <td>xpath</td>
+        <td>.//*[@id='off-canvas-wrapper-inner']/div/section/div[3]/div[2]/h1</td>
+        <td></td>
+        <td>exists</td>
+        <td></td>
+        <td>60</td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>endtest</td>
+        <td></td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+</body>
+</html>

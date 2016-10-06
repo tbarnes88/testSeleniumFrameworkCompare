@@ -1,0 +1,64 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<body>
+<h1>UATConnect</h1>
+<p>Sky Fantasy Football - Transfer</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td>Navigate to Sky FF Homepage</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>navigate</td>
+        <td>http://uat-skff.gfm.co.uk/</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>html/body/div[3]/div/nav/section/ul[2]/li[3]/a</td>
+        <td></td>
+        <td>wait</td>
+        <td>5</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Confirm Landed</td>
+        <td>xpath</td>
+        <td>//*[@id='playPromo']/div[2]/div/a</td>
+        <td>Pick your team</td>
+        <td>exists</td>
+        <td></td>
+        <td>60</td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,81 @@
+#set( $path = "" )
+#set($start = 1)
+#set($end = ($testSetTestResultSet.level))
+#set($range = [$start..$end])
+#foreach($i in $range)
+    #if ($i == 0)
+        #set( $path = "" )
+    #else
+        #set( $path = "$path../" )
+    #end
+#end
+
+
+<html>
+<head>
+    <!--<link href="../../../concordion.css" rel="stylesheet" type="text/css"/> -->
+    <link href="${path}style.css" rel="stylesheet" type="text/css"/>
+    <title>${testSetTestResultSet.title}</title>
+</head>
+<body>
+
+
+
+<div id="content">
+    <h1>Test Results For - ${testSetTestResultSet.testRunName} </h1>
+	 <!--#set( $env = $testSetTestResultSet.testEnvironment )-->
+     <!--<table class="bordered">-->
+		 <!--<tr> -->
+			 <!--<th>Browser</th> -->
+			 <!--<td>${env.browser}</td> -->
+			 <!--<th>Driver<br/>Agent</th>-->
+			 <!--<td>${env.driver}<br/>${env.userAgent}</td> -->
+		 <!--</tr>-->
+	 <!--</table>  -->
+
+    <!--<p><a class="${class}" href=${path}summaryindex.html >${testSetTestResultSet.topLevelName}</a></p>-->
+    <span class="breadcrumbs">${testSetTestResultSet.breadCrumbs} ${testSetTestResultSet.outputTitle}</span>
+    <!--<p><a href=../${testSetTestResultSet.parentFileName}.html >${testSetTestResultSet.parentFileTitle}</a></p>-->
+
+	<p></p>
+	<table class="bordered">
+        <thead>
+        <tr>
+            <th>No.</th>
+            <th>${testSetTestResultSet.outputTitle}</th>
+            <th>Test Status</th>
+            <th>End time</th>
+            <th>Previous Runs</th>
+        </tr>
+        </thead>
+        <tbody>
+            #set( $i = 0 )
+            #set( $start = 0 )
+            #set( $end = 0 )
+			#foreach($testSetTestResult in $testSetTestResultSet.getMap().entrySet())
+            #set( $i = $i + 1 )
+
+            <tr onclick="document.location = '$testSetTestResult.value.getLink()';">
+                <td> $i </td>
+                <td><a class="${class}" href=$testSetTestResult.value.getLink() >$testSetTestResult.value.getName()</a></td>
+                <td>$testSetTestResult.value.getTestStatus()</td>
+                <td><span class="time"> $testSetTestResult.value.getEndTime() </span></td>
+                <td><a class="${class}" href=$testSetTestResult.value.getPreviousRunsFolder() >$testSetTestResult.value.getPreviousRunsFolder()</a></td>
+            </tr>
+            #end
+                    <tr class="total">
+            <td></td>
+            <td>
+                <strong>Final Result:</strong>
+			</td>
+			<td>
+            	$testSetTestResultSet.getOverallStatus()
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>                                 </html>

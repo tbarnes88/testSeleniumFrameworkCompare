@@ -1,0 +1,50 @@
+/* concordion.custom.css - inherits from concordion.css*/
+
+/* generic styles*/
+.assays{color:#4b4b4b; margin:0; padding:0;}
+.subsection{border-top:1px solid #000;}
+/* headings */
+	.assays h1{margin:0; padding:0;}
+	
+/* table */	
+	.assays table th{background:#F5F9FD; }
+	.assays table td,
+	.assays table th{
+		border:1px solid #b3c9eF;
+		color:#4B4B4B;
+		padding:2px 12px;
+	}
+	.assays th{text-align:left;}
+
+
+/* ordered lists */
+.assays ol {counter-reset: item 0}
+	
+	/*top li */
+	.assays li{counter-increment: item;}
+		
+        /* ol ol */
+        .assays ol ol{margin:0 0 0 8px; padding:0;}
+        
+        /* li li */
+		.assays li li{margin:0; padding:0; border:none;}
+		.assays li li{display:block;}
+		.assays li li:before { content: counters(item, ".") " "; }		
+		.assays li div{display:inline;}
+		
+		/*remove counters from nested uls*/
+		.assays ul li{counter-increment:none; list-style-type:none}
+		.assays ul li:before{content:none;}
+		
+		
+		/* testDecription Styles */
+		.assays .testDescription{font-weight:bold;}
+		
+		/* testTrace Styles*/
+		.assays .testTrace{font-style:italic; margin:0 0 0 8px; padding:0;}
+		/*
+		.assays .assert{background:#ffff99; color:black; padding:0 5px;}
+		*/
+		
+		
+

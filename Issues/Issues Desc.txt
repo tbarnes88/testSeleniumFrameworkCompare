@@ -1,0 +1,41 @@
+Issues found on the site - not written in full bug style, more an FYI
+
+______________________________
+
+clippingResults.JPG
+
+Steps to reproduce:
+
+Select Electricity and Gas
+Set Electricity kwh at 99999
+Set gas kwh at 1
+
+Results are clipped
+
+______________________________
+
+errorFilter.jpg
+
+When attempted to change the filter on the results page I received this message and was unable to proceed
+
+______________________________
+
+incorrectID
+
+Your next buttons have the id of a goto on the page they currently are
+
+eg. Your Supplier page has the id "goto-your-supplier-details"
+
+______________________________
+
+jsVoid
+
+Firefox middle mouse clicking More Details on results page ends up with this, I am aware that Chrome blocks opening this in a new tab
+
+______________________________
+
+similarID
+
+Email address field has id's of "email" parent and "Email" as a child - too similar
+
+______________________________

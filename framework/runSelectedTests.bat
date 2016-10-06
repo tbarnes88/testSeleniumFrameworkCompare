@@ -1,0 +1,3 @@
+Echo "Launching tests...
+cd C:\testSeleniumFramework
+mvn clean test exec:java -Dconcordion.output.dir="C:\SeleniumResults" -Dexec.args="test.html"

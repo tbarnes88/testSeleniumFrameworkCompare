@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="informix">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Documents/NetBeansProjects/SQLConnection/dist/lib/ifxjdbc.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/NetBeansProjects/SQLConnection/dist/lib/ifxjdbcx.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/NetBeansProjects/SQLConnection/dist/lib/ifxlang.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/NetBeansProjects/SQLConnection/dist/lib/ifxlsupp.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/NetBeansProjects/SQLConnection/dist/lib/ifxsqlj.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/NetBeansProjects/SQLConnection/dist/lib/ifxtools.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/NetBeansProjects/SQLConnection/dist/lib/jdbi-2.4.9.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/jxl-2.6.3.jar/jxl-2.6.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
